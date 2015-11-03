@@ -100,7 +100,10 @@ public class AlipayMobilePayServiceImpl implements AlipayMobilePayService {
 							.decode(conf.getAliPublicKey()))) {
 				throw new InvalidSignatureException("Signature is not valid!");
 			}
-		} catch (UnsupportedEncodingException | GeneralSecurityException e) {
+		} catch (UnsupportedEncodingException e) {
+			logger.error("RSA signature validation failed:" + e.getMessage());
+			throw new InvalidSignatureException(e);
+		}catch(GeneralSecurityException e) {
 			logger.error("RSA signature validation failed:" + e.getMessage());
 			throw new InvalidSignatureException(e);
 		}
