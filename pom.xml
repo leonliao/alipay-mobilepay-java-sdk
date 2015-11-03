@@ -4,7 +4,7 @@
 	<artifactId>alipay-mobilepay-java-sdk</artifactId>
 	<packaging>jar</packaging>
 	<groupId>com.leonoss</groupId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>Alipay mobile pay Java SDK</name>
 	<description>Providing Java SDK for mobile app development, which requires Alipay App payment capability.</description>
         <scm>
